@@ -1,29 +1,29 @@
 import React from "react";
-import { cashfree } from "../Cashfree";
+// import { cashfree } from "../Cashfree";
 
 const ExploreCourses = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log("heyhey", e.target.value);
-    let options = {
-      values: {
-        upiId: "testsuccess@gocash",
-      },
-    };
-    let component = cashfree.create("upiCollect", options);
+    // let options = {
+    //   values: {
+    //     upiId: "testsuccess@gocash",
+    //   },
+    // };
+    // let component = cashfree.create("upiCollect", options);
 
-    component.mount("#my-div");
-    document.getElementById("pay").addEventListener("click", function () {
-      let paymentPromise = cashfree.pay({
-        paymentMethod: component,
-        paymentSessionId:
-          "session_rHLHJmjlBRO2gj-stV_r9AU3d_-OIdg-RwDRoyVHDg2dQaz7YhWkwuR5WtT3jr3SmueZtV-5A1VDVfnxpmCTv1NlFaBtM1X025O1Iyjg9utg",
-        returnUrl: "https://test.cashfree.com/pgappsdemos/v3success.php?{order_id}",
-      });
-      paymentPromise.then(function (result) {
-        console.log(result);
-      });
-    });
+    // // component.mount("#my-div");
+    // document.getElementById("pay").addEventListener("click", function () {
+    //   let paymentPromise = cashfree.pay({
+    //     paymentMethod: component,
+    //     paymentSessionId:
+    //       "session_rHLHJmjlBRO2gj-stV_r9AU3d_-OIdg-RwDRoyVHDg2dQaz7YhWkwuR5WtT3jr3SmueZtV-5A1VDVfnxpmCTv1NlFaBtM1X025O1Iyjg9utg",
+    //     returnUrl: "https://test.cashfree.com/pgappsdemos/v3success.php?{order_id}",
+    //   });
+    //   paymentPromise.then(function (result) {
+    //     console.log(result);
+    //   });
+    // });
   };
 
   return (
